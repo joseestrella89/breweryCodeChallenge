@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import BreweriesScreen from '@Screens/Brewery/BreweriesScreen';
+import BreweriesScreen from '@Screens/Breweries/BreweriesScreen';
 import BreweryScreen from '@Screens/Brewery/BreweryScreen';
 
 const Stack = createNativeStackNavigator();

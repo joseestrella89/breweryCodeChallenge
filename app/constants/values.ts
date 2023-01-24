@@ -1,0 +1,1 @@
+export const BREWERIES_PAGINATION_SIZE = 15;

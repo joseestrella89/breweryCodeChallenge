@@ -18,9 +18,10 @@
     "baseUrl": "app",
     "typeRoots": ["./app/types"],
     "paths": {
-      "*": ["types/*"],
+      // "*": ["types/*"],
       "@Components/*": ["components/*"],
       "@Config/*": ["config/*"],
+      "@Constants": ["constants/*"],
       "@Models/*": ["models/*"],
       "@Navigators/*": ["navigators/*"],
       "@Screens/*": ["screens/*"],
