@@ -1,4 +1,4 @@
-import INetworkService from "@Services/INetworkService";
+import INetworkService from '@Services/network/INetworkService';
 
 export default class NetworkServiceFetch implements INetworkService {
     async request<T>(path: string, config?: RequestInit): Promise<T> {

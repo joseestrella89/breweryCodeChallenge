@@ -16,7 +16,9 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "baseUrl": "app",
+    "typeRoots": ["./app/types"],
     "paths": {
+      "*": ["types/*"],
       "@Components/*": ["components/*"],
       "@Config/*": ["config/*"],
       "@Models/*": ["models/*"],

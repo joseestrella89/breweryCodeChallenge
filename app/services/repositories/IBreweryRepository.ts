@@ -1,4 +1,4 @@
-import { Brewery } from "@Models/brewery"
+import { Brewery } from '@Models/Brewery'
 
 export interface BreweryListResponse {
     breweries: Brewery[];

@@ -1,25 +1,29 @@
-import INetworkService from "@Services/INetworkService";
-import { API_URL } from "config/envs";
-import IBreweryRepository, { BreweryListResponse, SearchByParams, FilterByParams } from "@Services/repositories/IBreweryRepository";
+import INetworkService from '@Services/network/INetworkService';
+import Envs from '@Config/envs';
+import IBreweryRepository, { BreweryListResponse, SearchByParams, FilterByParams } from '@Services/repositories/IBreweryRepository';
+import IBreweryMapper from '@Services/mappers/IBreweryMapper';
+import BreweryMapper from '@Services/mappers/BreweryMapper';
+import { BreweryDTO } from '@Services/dto/BreweryDTO';
 
 export default class BreweryRepositoryNetwork implements IBreweryRepository {
     networkService: INetworkService;
+    breweryMapper: IBreweryMapper;
 
     constructor(networkService: INetworkService) {
         this.networkService = networkService;
+        this.breweryMapper = new BreweryMapper();
     }
 
     async searchByKeyword(params: SearchByParams): Promise<BreweryListResponse> {
-        const response = this.networkService.get<BreweryListResponse>(`${API_URL}/breweries/search?query=${params.query}&per_page=${params.perPage}`);
-        console.log(response);
-        return {
-            breweries: []
-        };
+        const breweriesDTO = await this.networkService.get<BreweryDTO[]>(`${Envs.API_URL}/breweries/search?query=${params.query}&per_page=${params.perPage}`);
+        const breweries = breweriesDTO.map((breweryDTO: BreweryDTO) => this.breweryMapper.mapBrewery(breweryDTO));
+        return { breweries };
     }
 
     async filterBy(params: FilterByParams): Promise<BreweryListResponse> {
-        return {
-            breweries: []
-        };
+        const url = `${Envs.API_URL}/breweries?by_name=${params.name}&by_city=${params.city}&per_page=${params.perPage}`
+        const breweriesDTO = await this.networkService.get<BreweryDTO[]>(url);
+        const breweries = breweriesDTO.map((breweryDTO: BreweryDTO) => this.breweryMapper.mapBrewery(breweryDTO));
+        return { breweries };
     }
 }

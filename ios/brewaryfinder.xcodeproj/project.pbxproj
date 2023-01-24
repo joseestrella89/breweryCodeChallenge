@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* brewaryfinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* brewaryfinderTests.m */; };
-		11D166F323D7103672A5B34B /* libPods-brewaryfinder-brewaryfinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A66BA06FF05B88DF08BB38B3 /* libPods-brewaryfinder-brewaryfinderTests.a */; };
+		02BC9766519A29A8F9FC3FEB /* libPods-brewaryfinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF831ABF7766B9B4C0693C8 /* libPods-brewaryfinder.a */; };
+		03FE6B2B68C1B24739EEF868 /* libPods-brewaryfinder-brewaryfinderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E4E331948E9BEC4151D2CB /* libPods-brewaryfinder-brewaryfinderTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		D70726FB148DB071317CEC44 /* libPods-brewaryfinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4520311D28D7C3D6698EF5A /* libPods-brewaryfinder.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +36,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = brewaryfinder/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = brewaryfinder/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = brewaryfinder/main.m; sourceTree = "<group>"; };
-		2E2AEBB342D1A8B20C80C23E /* Pods-brewaryfinder-brewaryfinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brewaryfinder-brewaryfinderTests.debug.xcconfig"; path = "Target Support Files/Pods-brewaryfinder-brewaryfinderTests/Pods-brewaryfinder-brewaryfinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		80CBB54CB78BEF567E943668 /* Pods-brewaryfinder-brewaryfinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brewaryfinder-brewaryfinderTests.debug.xcconfig"; path = "Target Support Files/Pods-brewaryfinder-brewaryfinderTests/Pods-brewaryfinder-brewaryfinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = brewaryfinder/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A66BA06FF05B88DF08BB38B3 /* libPods-brewaryfinder-brewaryfinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-brewaryfinder-brewaryfinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9445EBF2E2C36003FDD83EE /* Pods-brewaryfinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brewaryfinder.release.xcconfig"; path = "Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder.release.xcconfig"; sourceTree = "<group>"; };
-		ADA63CED640A6E16A8620527 /* Pods-brewaryfinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brewaryfinder.debug.xcconfig"; path = "Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder.debug.xcconfig"; sourceTree = "<group>"; };
-		B6936E9D06CFFA4B9B77A0E1 /* Pods-brewaryfinder-brewaryfinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brewaryfinder-brewaryfinderTests.release.xcconfig"; path = "Target Support Files/Pods-brewaryfinder-brewaryfinderTests/Pods-brewaryfinder-brewaryfinderTests.release.xcconfig"; sourceTree = "<group>"; };
-		E4520311D28D7C3D6698EF5A /* libPods-brewaryfinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-brewaryfinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7E4E331948E9BEC4151D2CB /* libPods-brewaryfinder-brewaryfinderTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-brewaryfinder-brewaryfinderTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE71E7A5E01AB55F7A45B0F /* Pods-brewaryfinder-brewaryfinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brewaryfinder-brewaryfinderTests.release.xcconfig"; path = "Target Support Files/Pods-brewaryfinder-brewaryfinderTests/Pods-brewaryfinder-brewaryfinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		BCF831ABF7766B9B4C0693C8 /* libPods-brewaryfinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-brewaryfinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB62D63C9A7F266CBB153B9 /* Pods-brewaryfinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brewaryfinder.debug.xcconfig"; path = "Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F035FA4F62A6979C86DD2472 /* Pods-brewaryfinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brewaryfinder.release.xcconfig"; path = "Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11D166F323D7103672A5B34B /* libPods-brewaryfinder-brewaryfinderTests.a in Frameworks */,
+				03FE6B2B68C1B24739EEF868 /* libPods-brewaryfinder-brewaryfinderTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D70726FB148DB071317CEC44 /* libPods-brewaryfinder.a in Frameworks */,
+				02BC9766519A29A8F9FC3FEB /* libPods-brewaryfinder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				E4520311D28D7C3D6698EF5A /* libPods-brewaryfinder.a */,
-				A66BA06FF05B88DF08BB38B3 /* libPods-brewaryfinder-brewaryfinderTests.a */,
+				BCF831ABF7766B9B4C0693C8 /* libPods-brewaryfinder.a */,
+				A7E4E331948E9BEC4151D2CB /* libPods-brewaryfinder-brewaryfinderTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ADA63CED640A6E16A8620527 /* Pods-brewaryfinder.debug.xcconfig */,
-				A9445EBF2E2C36003FDD83EE /* Pods-brewaryfinder.release.xcconfig */,
-				2E2AEBB342D1A8B20C80C23E /* Pods-brewaryfinder-brewaryfinderTests.debug.xcconfig */,
-				B6936E9D06CFFA4B9B77A0E1 /* Pods-brewaryfinder-brewaryfinderTests.release.xcconfig */,
+				DCB62D63C9A7F266CBB153B9 /* Pods-brewaryfinder.debug.xcconfig */,
+				F035FA4F62A6979C86DD2472 /* Pods-brewaryfinder.release.xcconfig */,
+				80CBB54CB78BEF567E943668 /* Pods-brewaryfinder-brewaryfinderTests.debug.xcconfig */,
+				BCE71E7A5E01AB55F7A45B0F /* Pods-brewaryfinder-brewaryfinderTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "brewaryfinderTests" */;
 			buildPhases = (
-				0C360359108FECA706C8D185 /* [CP] Check Pods Manifest.lock */,
+				6218C5FECD1B57B24F522BDA /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				0188DD869CD4FE3766EC02A7 /* [CP] Embed Pods Frameworks */,
-				A3801C3CCBCF02CD33118D16 /* [CP] Copy Pods Resources */,
+				14B9B19A25BD8F59A043808F /* [CP] Embed Pods Frameworks */,
+				98D069B4FD4034CB2169A6D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "brewaryfinder" */;
 			buildPhases = (
-				03D8CD616A00B8F0EBA5D0A3 /* [CP] Check Pods Manifest.lock */,
+				6B50CDA18114551757F04B4F /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				B38028CEE24D9A45999B219C /* [CP] Embed Pods Frameworks */,
-				8A19B609F80929789F47084E /* [CP] Copy Pods Resources */,
+				24F6BA8B02AA991941880C32 /* [CP] Embed Pods Frameworks */,
+				DFA912A3C9645A1E60F51BF4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,7 +266,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		0188DD869CD4FE3766EC02A7 /* [CP] Embed Pods Frameworks */ = {
+		14B9B19A25BD8F59A043808F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,29 +283,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder-brewaryfinderTests/Pods-brewaryfinder-brewaryfinderTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		03D8CD616A00B8F0EBA5D0A3 /* [CP] Check Pods Manifest.lock */ = {
+		24F6BA8B02AA991941880C32 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-brewaryfinder-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0C360359108FECA706C8D185 /* [CP] Check Pods Manifest.lock */ = {
+		6218C5FECD1B57B24F522BDA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,24 +322,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A19B609F80929789F47084E /* [CP] Copy Pods Resources */ = {
+		6B50CDA18114551757F04B4F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-brewaryfinder-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A3801C3CCBCF02CD33118D16 /* [CP] Copy Pods Resources */ = {
+		98D069B4FD4034CB2169A6D8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,21 +361,21 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder-brewaryfinderTests/Pods-brewaryfinder-brewaryfinderTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B38028CEE24D9A45999B219C /* [CP] Embed Pods Frameworks */ = {
+		DFA912A3C9645A1E60F51BF4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-brewaryfinder/Pods-brewaryfinder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -430,7 +430,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E2AEBB342D1A8B20C80C23E /* Pods-brewaryfinder-brewaryfinderTests.debug.xcconfig */;
+			baseConfigurationReference = 80CBB54CB78BEF567E943668 /* Pods-brewaryfinder-brewaryfinderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -457,7 +457,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6936E9D06CFFA4B9B77A0E1 /* Pods-brewaryfinder-brewaryfinderTests.release.xcconfig */;
+			baseConfigurationReference = BCE71E7A5E01AB55F7A45B0F /* Pods-brewaryfinder-brewaryfinderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -481,7 +481,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADA63CED640A6E16A8620527 /* Pods-brewaryfinder.debug.xcconfig */;
+			baseConfigurationReference = DCB62D63C9A7F266CBB153B9 /* Pods-brewaryfinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -509,7 +509,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9445EBF2E2C36003FDD83EE /* Pods-brewaryfinder.release.xcconfig */;
+			baseConfigurationReference = F035FA4F62A6979C86DD2472 /* Pods-brewaryfinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

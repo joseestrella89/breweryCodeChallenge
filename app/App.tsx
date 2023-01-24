@@ -7,7 +7,7 @@
 
 import React from 'react';
 
-import AppNavigator from '@Navigators/AppNavigator'
+import AppNavigator from '@Navigators/AppNavigator';
 
 function App(): JSX.Element {
     // const isDarkMode = useColorScheme() === 'dark';
