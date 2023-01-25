@@ -16,6 +16,7 @@ export interface FilterByParams {
 }
 
 export default interface IBreweryRepository {
-    searchByKeyword(params: SearchByParams): Promise<BreweryListResponse>;
     filterBy(params: FilterByParams): Promise<BreweryListResponse>;
+    getBreweryById(id: string): Promise<Brewery>;
+    searchByKeyword(params: SearchByParams): Promise<BreweryListResponse>;
 }

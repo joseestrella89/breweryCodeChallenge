@@ -4,6 +4,7 @@ import IBreweryRepository, { BreweryListResponse, SearchByParams, FilterByParams
 import IBreweryMapper from '@Services/mappers/IBreweryMapper';
 import BreweryMapper from '@Services/mappers/BreweryMapper';
 import { BreweryDTO } from '@Services/dto/BreweryDTO';
+import { Brewery } from '@Models/Brewery';
 
 export default class BreweryRepositoryNetwork implements IBreweryRepository {
     networkService: INetworkService;
@@ -14,15 +15,21 @@ export default class BreweryRepositoryNetwork implements IBreweryRepository {
         this.breweryMapper = new BreweryMapper();
     }
 
-    async searchByKeyword(params: SearchByParams): Promise<BreweryListResponse> {
-        const breweriesDTO = await this.networkService.get<BreweryDTO[]>(`${Envs.API_URL}/breweries/search?query=${params.query}&per_page=${params.perPage}`);
+    async getBreweryById(id: string): Promise<Brewery> {
+        const url = `${Envs.API_URL}/breweries/${id}`
+        const breweryDTO = await this.networkService.get<BreweryDTO>(url);
+        return this.breweryMapper.mapBrewery(breweryDTO)
+    }
+
+    async filterBy(params: FilterByParams): Promise<BreweryListResponse> {
+        const url = `${Envs.API_URL}/breweries?by_name=${params.name}&by_city=${params.city}&per_page=${params.perPage}&meta`
+        const breweriesDTO = await this.networkService.get<BreweryDTO[]>(url);
         const breweries = breweriesDTO.map((breweryDTO: BreweryDTO) => this.breweryMapper.mapBrewery(breweryDTO));
         return { breweries };
     }
 
-    async filterBy(params: FilterByParams): Promise<BreweryListResponse> {
-        const url = `${Envs.API_URL}/breweries?by_name=${params.name}&by_city=${params.city}&per_page=${params.perPage}`
-        const breweriesDTO = await this.networkService.get<BreweryDTO[]>(url);
+    async searchByKeyword(params: SearchByParams): Promise<BreweryListResponse> {
+        const breweriesDTO = await this.networkService.get<BreweryDTO[]>(`${Envs.API_URL}/breweries/autocomplete?query=${params.query}&per_page=${params.perPage}`);
         const breweries = breweriesDTO.map((breweryDTO: BreweryDTO) => this.breweryMapper.mapBrewery(breweryDTO));
         return { breweries };
     }

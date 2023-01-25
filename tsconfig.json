@@ -19,10 +19,14 @@
     "typeRoots": ["./app/types"],
     "paths": {
       "*": ["types/*"],
+      "@Assets/*": ["assets/*"],
       "@Components/*": ["components/*"],
       "@Config/*": ["config/*"],
+      "@Constants/*": ["constants/*"],
+      "@Hooks/*": ["hooks/*"],
       "@Models/*": ["models/*"],
       "@Navigators/*": ["navigators/*"],
+      "@Redux/*": ["redux/*"],
       "@Screens/*": ["screens/*"],
       "@Services/*": ["services/*"],
     }

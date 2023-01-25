@@ -1,18 +1,27 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import BreweriesScreen from '@Screens/Brewery/BreweriesScreen';
+import BreweriesScreen from '@Screens/Breweries/BreweriesScreen';
 import BreweryScreen from '@Screens/Brewery/BreweryScreen';
+import { RouteNames } from '@Navigators/RouteNames';
 
-const Stack = createNativeStackNavigator();
+
+export type NavigatorParamsList = {
+    [RouteNames.Breweries]: {},
+    [RouteNames.Brewery]: {
+        breweryId: string;
+    },
+};
+
+const Stack = createNativeStackNavigator<NavigatorParamsList>();
 
 export const AuthenticatedStack = (): JSX.Element => {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                name="Breweries"
+                name={RouteNames.Breweries}
                 component={BreweriesScreen}
             />
             <Stack.Screen
-                name="Brewery Item"
+                name={RouteNames.Brewery}
                 component={BreweryScreen}
             />
         </Stack.Navigator>
