@@ -6,6 +6,8 @@ import { Brewery } from '@Models/Brewery';
 import { ListItems } from '@Components/ListItems';
 import { BreweryItem } from '@Screens/Breweries/components/BreweryItem';
 import { BreweriesFilter } from '@Screens/Breweries/components/BreweriesFilter';
+import { openURL } from '@Services/deeplinking/browser';
+import { BREWERIES_PAGINATION_SIZE } from '@Constants/values';
 
 interface Props {
     onSelectedItem: (id: string) => void;
@@ -13,9 +15,12 @@ interface Props {
 
 export const BreweriesPaginated = ({ onSelectedItem }: Props) => {
     const [breweriesPaginated, setBreweriesPaginated] = useState<Brewery[]>([]);
+    const [filterByName, setFilterByName] = useState<string>('');
+    const [filterByCity, setFilterByCity] = useState<string>('');
+    const repo = new BreweryRepositoryNetwork(new NetworkServiceFetch());
+
     useEffect(() => {
-        const repo = new BreweryRepositoryNetwork(new NetworkServiceFetch());
-        repo.filterBy({ name: '', city: '', perPage: 10 })
+        repo.filterBy({ name: '', city: '', perPage: BREWERIES_PAGINATION_SIZE })
             .then((response) => {
                 setBreweriesPaginated(response.breweries);
             })
@@ -26,7 +31,7 @@ export const BreweriesPaginated = ({ onSelectedItem }: Props) => {
     };
 
     const handleGoUrl = (url: string) => {
-
+        openURL(url);
     }
 
     const renderItems = ({ item, index}) => (
@@ -38,8 +43,13 @@ export const BreweriesPaginated = ({ onSelectedItem }: Props) => {
         />
     );
 
-    const handleOnFilter = () => {
-        
+    const handleOnFilter = (name: string, city: string) => {
+        repo.filterBy({ name, city, perPage: BREWERIES_PAGINATION_SIZE })
+            .then((response) => {
+                setBreweriesPaginated(response.breweries);
+                setFilterByName(name)
+                setFilterByCity(city)
+            })
     };
 
     return (

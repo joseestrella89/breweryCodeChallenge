@@ -17,8 +17,8 @@ type SIZES = typeof SIZE[keyof typeof SIZE];
 interface Props<T> {
     items: T[];
     placeholder: string;
-    value: string;
     size?: SIZES;
+    value: string;
     onChangeText: (text: string) => void;
     onSelect: (item: T) => void;
 }
@@ -49,7 +49,7 @@ export const SearchDropdown = <T extends Item>({
             onSelect={onItemSelected}
             size={size}
             onChangeText={onChangeText}>
-            {items.map(renderOption)}
+            { items.map(renderOption) }
         </Autocomplete>
     );
 };

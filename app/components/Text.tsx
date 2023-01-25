@@ -1,4 +1,5 @@
 import { Text as TextBase } from '@ui-kitten/components';
+import { StyleProp, TextStyle } from 'react-native';
 
 export const CATEGORY = {
     h1: 'h1',
@@ -21,8 +22,9 @@ type CATEGORIES = typeof CATEGORY[keyof typeof CATEGORY];
 interface Props {
     category: CATEGORIES;
     children: string;
+    style?: StyleProp<TextStyle> 
 }
 
-export const Text = ({ category, children }: Props) => (
-    <TextBase category={category}>{children}</TextBase>
+export const Text = ({ category, children, style }: Props) => (
+    <TextBase category={category} style={style}>{children}</TextBase>
 );
