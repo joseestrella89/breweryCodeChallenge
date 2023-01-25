@@ -32,10 +32,10 @@ export const BreweryItem = ({ brewery, onPress, goUrl }: Props) => {
         >
             <View style={Styles.container}>
                 <View style={Styles.descriptionContainer}>
-                    <Text category={CATEGORY.s1}>{brewery.name}</Text>
-                    <Text category={CATEGORY.p1}>{brewery.breweryType}</Text>
-                    <Text category={CATEGORY.p2}>{`${brewery.city}, ${brewery.country}`}</Text>
-                    <Text category={CATEGORY.p2}>{brewery.phone}</Text>
+                    <Text style={Styles.textMargin} category={CATEGORY.s1}>{brewery.name}</Text>
+                    <Text style={Styles.textMargin} category={CATEGORY.p1}>{brewery.breweryType}</Text>
+                    <Text style={Styles.textMargin} category={CATEGORY.p2}>{`${brewery.city}, ${brewery.country}`}</Text>
+                    <Text style={Styles.textMargin} category={CATEGORY.p2}>{brewery.phone}</Text>
                 </View>
                 <Button
                     type={TYPE_BUTTON.clear}

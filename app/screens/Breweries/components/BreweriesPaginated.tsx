@@ -1,29 +1,27 @@
 import React, { useEffect, useState } from 'react';
 
-import BreweryRepositoryNetwork from '@Services/repositories/BreweryRepositoryNetwork';
-import NetworkServiceFetch from '@Services/network/NetworkServiceFetch';
 import { Brewery } from '@Models/Brewery';
 import { ListItems } from '@Components/ListItems';
 import { BreweryItem } from '@Screens/Breweries/components/BreweryItem';
 import { BreweriesFilter } from '@Screens/Breweries/components/BreweriesFilter';
 import { openURL } from '@Services/deeplinking/browser';
 import { BREWERIES_PAGINATION_SIZE } from '@Constants/values';
+import { useDispatch } from 'react-redux';
+import { actionFilterBreweries } from '@Redux/actions/breweriesActions';
+import { useAppSelector } from '@Hooks/useAppSelector';
 
 interface Props {
     onSelectedItem: (id: string) => void;
 }
 
 export const BreweriesPaginated = ({ onSelectedItem }: Props) => {
-    const [breweriesPaginated, setBreweriesPaginated] = useState<Brewery[]>([]);
+    const dispatch = useDispatch();
+    const { breweriesFiltered } = useAppSelector(({ BreweryReducer }) => BreweryReducer);
     const [filterByName, setFilterByName] = useState<string>('');
     const [filterByCity, setFilterByCity] = useState<string>('');
-    const repo = new BreweryRepositoryNetwork(new NetworkServiceFetch());
 
     useEffect(() => {
-        repo.filterBy({ name: '', city: '', perPage: BREWERIES_PAGINATION_SIZE })
-            .then((response) => {
-                setBreweriesPaginated(response.breweries);
-            })
+        dispatch(actionFilterBreweries({ name: '', city: '', perPage: BREWERIES_PAGINATION_SIZE }));
     }, []);
 
     const onSelect = (brewery: Brewery) => {
@@ -44,12 +42,9 @@ export const BreweriesPaginated = ({ onSelectedItem }: Props) => {
     );
 
     const handleOnFilter = (name: string, city: string) => {
-        repo.filterBy({ name, city, perPage: BREWERIES_PAGINATION_SIZE })
-            .then((response) => {
-                setBreweriesPaginated(response.breweries);
-                setFilterByName(name)
-                setFilterByCity(city)
-            })
+        dispatch(actionFilterBreweries({ name, city, perPage: BREWERIES_PAGINATION_SIZE }));
+        setFilterByName(name);
+        setFilterByCity(city);
     };
 
     return (
@@ -58,7 +53,7 @@ export const BreweriesPaginated = ({ onSelectedItem }: Props) => {
                 onFilter={handleOnFilter}
             />
             <ListItems
-                items={breweriesPaginated}
+                items={breweriesFiltered}
                 renderItem={renderItems}
             />
         </>

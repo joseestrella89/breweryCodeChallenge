@@ -26,6 +26,7 @@
       "@Hooks/*": ["hooks/*"],
       "@Models/*": ["models/*"],
       "@Navigators/*": ["navigators/*"],
+      "@Redux/*": ["redux/*"],
       "@Screens/*": ["screens/*"],
       "@Services/*": ["services/*"],
     }

@@ -8,6 +8,9 @@ const Styles = StyleSheet.create({
         height: 250,
         width: '100%',
     },
+    textMargin: {
+        marginVertical: 1,
+    },
     websiteInfoContainer: {
         alignItems: 'center',
         flexDirection: 'row',

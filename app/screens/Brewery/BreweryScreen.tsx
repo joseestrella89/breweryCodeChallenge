@@ -24,9 +24,6 @@ const BreweryScreen = (props: Props): JSX.Element => {
             .then((brewery: Brewery) => {
                 setBrewery(brewery);
             })
-            .catch((e) => {
-                // setError('Something wrong has happened');
-            });
     }, []);
 
     if (brewery === null) {
@@ -91,9 +88,9 @@ const BreweryScreen = (props: Props): JSX.Element => {
                     resizeMode={'cover'}
                 />
                 <Card>
-                    <Text category={CATEGORY.h6}>{brewery.name}</Text>
-                    <Text category={CATEGORY.s1}>{`${brewery.street}, ${brewery.postalCode}, ${brewery.city}`}</Text>
-                    <Text category={CATEGORY.s1}>{`${brewery.state}, ${brewery.country}`}</Text>
+                    <Text style={Styles.textMargin} category={CATEGORY.h6}>{brewery.name}</Text>
+                    <Text style={Styles.textMargin} category={CATEGORY.s1}>{`${brewery.street}, ${brewery.postalCode}, ${brewery.city}`}</Text>
+                    <Text style={Styles.textMargin} category={CATEGORY.s1}>{`${brewery.state}, ${brewery.country}`}</Text>
                 </Card>
                 {renderWebsiteUrl()}
                 {renderMap()}

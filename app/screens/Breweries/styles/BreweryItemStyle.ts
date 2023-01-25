@@ -7,6 +7,9 @@ const Styles = StyleSheet.create({
     descriptionContainer: {
         flex: 1,
     },
+    textMargin: {
+        marginVertical: 1,
+    }
 });
 
 export default Styles;

@@ -2,30 +2,24 @@ import React, { useState } from 'react';
 
 import { SearchDropdown, SIZE } from '@Components/SearchDropdown';
 import { Brewery } from '@Models/Brewery';
-import { searchBreweryiesByKeyword } from '@Screens/Breweries/userCases/searchBreweriesByKeyword';
+import { useDispatch } from 'react-redux';
+import { actionSearchByKeyword } from '@Redux/actions/breweriesActions';
+import { useAppSelector } from '@Hooks/useAppSelector';
+import { BREWERIES } from '@Constants/strings';
+import { BREWERIES_SEARCH_PAGINATION_SIZE } from '@Constants/values';
 
 interface Props {
     onSelectedItem: (id: string) => void;
 }
 
 export const BreweriesSearch = ({ onSelectedItem }: Props) => {
-    // let timeout = null;
-    // const { isLoading, data: breweries = [], mutate } = useMutation((params: SearchByParams) => {
-    //     return searchBreweryiesByKeyword(params)
-    // });
+    const dispatch = useDispatch();
+    const { breweriesSuggestions } = useAppSelector(({ BreweryReducer }) => BreweryReducer);
 
     const [textToFind, setTextToFind] = useState('');
-    const [breweries, setBreweries] = useState<Brewery[]>([]);
-    // const findBreweries = (query: string) => {
-    //     setTextToFind(query);
-    //     // debounce(callDeubu(), 300);
-    //     mutate({ query: query, perPage: 15 })
-    // };
     const findBreweries = (query: string) => {
         setTextToFind(query);
-        searchBreweryiesByKeyword({ query: textToFind, perPage: 15 }).then((breweries) => {
-            setBreweries(breweries)
-        });
+        dispatch(actionSearchByKeyword({ query: textToFind, perPage: BREWERIES_SEARCH_PAGINATION_SIZE }));
     };
 
     const handleOnSelectedItem = (brewery: Brewery) => {
@@ -34,8 +28,8 @@ export const BreweriesSearch = ({ onSelectedItem }: Props) => {
 
     return (
         <SearchDropdown
-            placeholder='Find'
-            items={breweries}
+            placeholder={BREWERIES.FIND_BY_KEYWORD}
+            items={breweriesSuggestions}
             value={textToFind}
             size={SIZE.large}
             onChangeText={findBreweries}
