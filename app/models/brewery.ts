@@ -1,5 +1,5 @@
 export interface Brewery {
-    id: string;
+    readonly id: string;
     name: string;
     breweryType: string;
     street: string;
