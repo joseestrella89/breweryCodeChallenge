@@ -8,24 +8,19 @@ import { Container } from '@Components/Container';
 import { BreweriesPaginated } from '@Screens/Breweries/components/BreweriesPaginated';
 import { BreweriesSearch } from '@Screens/Breweries/components/BreweriesSearch';
 
-
-interface Props extends NativeStackScreenProps<NavigatorParamsList, RouteNames.Breweries> {};
+type Props = NativeStackScreenProps<NavigatorParamsList, RouteNames.Breweries>;
 
 const BreweriesScreen = (props: Props) => {
     const handleOnSelectedItem = (id: string) => {
         props.navigation.navigate(RouteNames.Brewery, {
-            breweryId: id
-        })
+            breweryId: id,
+        });
     };
 
     return (
         <Container>
-            <BreweriesSearch
-                onSelectedItem={handleOnSelectedItem}
-            />
-            <BreweriesPaginated
-                onSelectedItem={handleOnSelectedItem}
-            />
+            <BreweriesSearch onSelectedItem={handleOnSelectedItem} />
+            <BreweriesPaginated onSelectedItem={handleOnSelectedItem} />
         </Container>
     );
 };
